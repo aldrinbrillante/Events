@@ -19,7 +19,7 @@ def index():
     """Show upcoming events to users!"""
     # TODO: Get all events and send to the template
     events = Event.query.all()
-    return render_template('index.html')
+    return render_template('index.html', events=events)
 
 
 @main.route('/create', methods=['GET', 'POST'])
